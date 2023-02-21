@@ -13,9 +13,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(task_params)
-    @task.save
-    redirect_to task_path(@task)
+    task = Task.new(task_params)
+    task.save
+    redirect_to tasks_path
   end
 
   def edit
@@ -28,8 +28,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    # No need for app/views/tasks/destroy.html.erb
-    redirect_to tasks_path, status: :see_other
+    redirect_to tasks_path
   end
 
   private
