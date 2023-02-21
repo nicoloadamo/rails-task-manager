@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h1><%= @task.title %></h1>
     <%= link_to edit_task_path(@task.id), class: 'btn btn-light btn-sm border' do %>
-      <i class="fa fa-pencil"></i> Edit this task
+      <i class="fa fa-pencil"></i> Modifica questa attivitá
     <% end %>
   </div>
 
@@ -10,13 +10,13 @@
   <p class="well"><%= @task.details %></p>
 
   <% if @task.completed %>
-    <i class="fa fa-check-square-o"></i> This task is completed
+    <i class="fa fa-check-square-o"></i> Questa attivitá é stata completata
   <% else %>
-    <i class="fa fa-square-o"></i> This task is not completed yet
+    <i class="fa fa-square-o"></i> Questa attivitá non é ancora stata completata
   <% end %>
 
   <hr>
   <%= link_to tasks_path do %>
-    <i class="fa-solid fa-arrow-rotate-left"></i> Back to list
+    <i class="fa-solid fa-arrow-rotate-left"></i> Torna alla lista
   <% end %>
 </div>

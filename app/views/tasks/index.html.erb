@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <h1>My tasks</h1>
+  <h1>Le mie attivitá</h1>
 
   <ul id="tasks">
     <% @tasks.each do |task| %>
@@ -10,7 +10,7 @@
           <i class="fa-regular fa-square"></i>
         <% end %>
         <%= link_to task.title, task_path(task.id) %>
-        <%= link_to task_path(task.id), data: {turbo_method: :delete, turbo_confirm: "Delete #{task.title}?"} do %>
+        <%= link_to task_path(task.id), data: {turbo_method: :delete, turbo_confirm: "Cancella #{task.title}?"} do %>
           <i class="fa-regular fa-trash-can"></i>
         <% end %>
       </li>
@@ -20,6 +20,6 @@
   <hr>
 
   <%= link_to new_task_path do %>
-    <i class="fa-solid fa-plus"></i> Add a new task
+    <i class="fa-solid fa-plus"></i> Aggiungi nuova attivitá
   <% end %>
 </div>
